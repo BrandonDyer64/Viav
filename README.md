@@ -1,2 +1,3 @@
-# discord-hack-week
-Hack Week
+# Discord Hack Week
+
+Bot submission

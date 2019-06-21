@@ -1,0 +1,48 @@
+{
+  "name": "discord-hack-week",
+  "version": "1.0.0",
+  "description": "Hack Week",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "local": "nodemon src/index.js",
+    "test": "mocha \"src/**/*.spec.json\" --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonDyer64/discord-hack-week.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "commands",
+    "hack",
+    "week",
+    "hack-week"
+  ],
+  "authors": [
+    "Brandon Dyer",
+    "LudusLight",
+    "Michael55555"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrandonDyer64/discord-hack-week/issues"
+  },
+  "homepage": "https://github.com/BrandonDyer64/discord-hack-week#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "husky": "^2.4.1",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
