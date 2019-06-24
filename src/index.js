@@ -1,12 +1,12 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const client = require("./Client");
+const { TOKEN: token } = process.env;
 
-let token = process.env.TOKEN;
 if (!token) {
   console.log("TOKEN=DISCORD_TOKEN npm start");
   return;
 }
 
 client.on("voiceStateUpdate", require("./VoiceUpdate"));
+client.on("message", require("./Message"));
 
 client.login(token);
