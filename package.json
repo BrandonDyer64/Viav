@@ -4,8 +4,8 @@
   "description": "Hack Week",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "local": "nodemon src/index.js",
+    "prod": "ENV=prod node src/index.js",
+    "local": "ENV=local nodemon src/index.js",
     "test": "mocha \"src/**/*.spec.json\" --exit"
   },
   "repository": {
