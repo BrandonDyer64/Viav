@@ -1,12 +1,6 @@
-const client = require("./Client");
+const { ShardingManager } = require("discord.js");
 const { TOKEN: token } = process.env;
+const manager = new ShardingManager("./src/bot.js", { token: token });
 
-if (!token) {
-  console.log("TOKEN=DISCORD_TOKEN npm start");
-  return;
-}
-
-client.on("voiceStateUpdate", require("./VoiceUpdate"));
-client.on("message", require("./Message"));
-
-client.login(token);
+manager.spawn();
+manager.on("launch", shard => console.log(`Launched shard ${shard.id}`));
