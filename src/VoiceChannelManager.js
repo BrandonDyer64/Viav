@@ -11,6 +11,10 @@ function duplicateChannel(channel, member) {
   if (!channel.manageable) return;
 
   channel.clone().then(newChannel => {
+    if (channel.parent) {
+      newChannel.setParent(channel.parent);
+    }
+
     const code = codeNum.toString(32);
     codeNum = ++codeNum % 0xffff;
 
