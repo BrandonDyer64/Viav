@@ -1,6 +1,6 @@
 # Discord Hack Week
 
-Bot submission
+<img src="./img/hack_wump_ship.png" height="200"/>
 
 ## Running
 
@@ -20,3 +20,5 @@ TOKEN=<bot_token> npm run local
 export TOKEN=<prod_bot_token>
 npm run prod
 ```
+
+<img src="./img/hack_pirate_black.png" height="100"/>
