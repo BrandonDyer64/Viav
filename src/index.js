@@ -1,6 +1,17 @@
-const { ShardingManager } = require("discord.js");
-const { TOKEN: token } = process.env;
-const manager = new ShardingManager("./src/bot.js", { token: token });
+const client = require("./Client");
+const textChannelManager = require("./TextChannelManager");
+const voiceChannelManager = require("./VoiceChannelManager");
+const { TOKEN } = process.env;
 
-manager.spawn();
-manager.on("launch", shard => console.log(`Launched shard ${shard.id}`));
+if (!TOKEN) {
+  console.log("TOKEN=DISCORD_TOKEN npm start");
+  return;
+}
+
+voiceChannelManager.emitter.on("channelCreated", textChannelManager.create);
+voiceChannelManager.emitter.on("channelDestroyed", textChannelManager.destroy);
+
+client.on("voiceStateUpdate", require("./VoiceUpdate"));
+client.on("message", require("./Message"));
+
+client.login(TOKEN);

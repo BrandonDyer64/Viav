@@ -1,12 +1,17 @@
 const client = require("./Client");
-const { TOKEN: token } = process.env;
+const textChannelManager = require("./TextChannelManager");
+const voiceChannelManager = require("./VoiceChannelManager");
+const { TOKEN } = process.env;
 
-if (!token) {
+if (!TOKEN) {
   console.log("TOKEN=DISCORD_TOKEN npm start");
   return;
 }
 
+voiceChannelManager.emitter.on("channelCreated", textChannelManager.create);
+voiceChannelManager.emitter.on("channelDestroyed", textChannelManager.destroy);
+
 client.on("voiceStateUpdate", require("./VoiceUpdate"));
 client.on("message", require("./Message"));
 
-client.login(token);
+client.login(TOKEN);

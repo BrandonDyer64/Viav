@@ -1,16 +1,17 @@
-const channelJoin = require("./ChannelJoin");
-const channelLeave = require("./ChannelLeave");
+const manager = require("./VoiceChannelManager");
 
 module.exports = (oldMember, newMember) => {
   if (oldMember.voiceChannelID == newMember.voiceChannelID) return;
 
-  const oldChannel = oldMember.voiceChannel;
-  if (oldChannel) {
-    channelLeave(oldChannel, oldMember);
+  function handler(member, count, fun) {
+    const channel = member.voiceChannel;
+
+    if (!channel) return;
+    if (channel.members.array().length != count) return;
+
+    fun(channel, member);
   }
 
-  const newChannel = newMember.voiceChannel;
-  if (newChannel) {
-    channelJoin(newChannel, newMember);
-  }
+  handler(oldMember, 0, manager.destroyChannel);
+  handler(newMember, 1, manager.duplicateChannel);
 };
