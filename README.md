@@ -1,6 +1,6 @@
 # Discord Hack Week
 
-<img src="./src/hack_wump_ship.png" height="200"/>
+<img src="./img/hack_wump_ship.png" height="200"/>
 
 ## Running
 
