@@ -1,6 +1,6 @@
 # Discord Hack Week
 
-Bot submission
+<img src="https://i.imgur.com/nAb2cb1.png" height="200" align="center"/>
 
 ## Running
 
@@ -20,3 +20,5 @@ TOKEN=<bot_token> npm run local
 export TOKEN=<prod_bot_token>
 npm run prod
 ```
+
+<img src="https://i.imgur.com/6cYNc1s.png" height="100"/>
