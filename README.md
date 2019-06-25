@@ -1,6 +1,6 @@
 # Discord Hack Week
 
-<img src="https://i.imgur.com/nAb2cb1.png" height="200" align="center"/>
+<img src="./src/hack_wump_ship.png" height="200"/>
 
 ## Running
 
@@ -21,4 +21,4 @@ export TOKEN=<prod_bot_token>
 npm run prod
 ```
 
-<img src="https://i.imgur.com/6cYNc1s.png" height="100"/>
+<img src="./img/hack_pirate_black.png" height="100"/>
