@@ -4,7 +4,21 @@
 
 ## About
 
-Viav is a minimalist, opinionated, voice channel management bot. Add it to your server and join a voice channel.
+Viav is a minimalist, opinionated, voice channel management bot. To see what it's all about just add it to your server and join a voice channel.
+
+## Features
+
+### Automatic Voice Channels
+
+Always makes sure you have one available voice channel.
+
+### A Text Channel for Every Voice Channel
+
+Creates a text channel for every voice channel.
+
+### Screen Sharing
+
+Adds a link to the voice channel screen share in the text channel's topic.
 
 ## Running
 
