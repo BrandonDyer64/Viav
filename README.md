@@ -1,5 +1,3 @@
-# Discord Hack Week
-
 <img src="./img/logo_trans_black.png" height="100" /><img src="./img/hack_wump_ship.png" height="120" align="right" />
 
 ## Running
