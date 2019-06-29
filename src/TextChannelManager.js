@@ -1,9 +1,27 @@
 function create(voiceChannel, name, code) {
-  // TODO: Create voice to text
+  const guild = voiceChannel.guild;
+  guild
+    .createChannel("voice-viav-" + code, { type: "text" })
+    .then(channel => {
+      if (voiceChannel.parent) {
+        return channel.setParent(voiceChannel.parent);
+      }
+    })
+    .then(channel => {
+      channel.setTopic(
+        `https://discordapp.com/channels/${guild.id}/${voiceChannel.id}`
+      );
+    })
+    .catch(console.error);
 }
 
 function destroy(voiceChannel, name, code) {
-  // TODO: Destroy voice to text
+  textChannel = voiceChannel.guild.channels.find(
+    channel => channel.name === "voice-viav-" + code.toLowerCase()
+  );
+  if (textChannel) {
+    textChannel.delete();
+  }
 }
 
 module.exports = {
