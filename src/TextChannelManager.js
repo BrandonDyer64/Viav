@@ -3,9 +3,8 @@ function create(voiceChannel, name, code) {
   guild
     .createChannel("voice-viav-" + code, { type: "text" })
     .then(channel => {
-      if (voiceChannel.parent) {
-        return channel.setParent(voiceChannel.parent);
-      }
+      if (!voiceChannel.parent) return channel;
+      return channel.setParent(voiceChannel.parent);
     })
     .then(channel => {
       channel.setTopic(
