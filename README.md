@@ -2,6 +2,10 @@
 
 [**Invite**](https://discordapp.com/oauth2/authorize?client_id=446151195338473485&permissions=16&scope=bot) Viav to your server
 
+## About
+
+Viav is a minimalist, opinionated, voice channel management bot. Add it to your server and join a voice channel.
+
 ## Running
 
 ```
