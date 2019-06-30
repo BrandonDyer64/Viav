@@ -1,7 +1,7 @@
 {
-  "name": "discord-hack-week",
+  "name": "viav",
   "version": "1.0.0",
-  "description": "Hack Week",
+  "description": "A minimalist, opinionated, voice channel management bot.",
   "main": "src/index.js",
   "scripts": {
     "prod": "ENV=prod node src/index.js",
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/BrandonDyer64/discord-hack-week#readme",
   "dependencies": {
     "discord.js": "^11.5.1",
+    "mongodb": "^3.2.7",
     "prettier": "^1.18.2"
   },
   "devDependencies": {
