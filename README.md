@@ -4,7 +4,7 @@
 
 ## About
 
-Viav is a minimalist, opinionated, voice channel management bot. To see what it's all about just add it to your server and join a voice channel.
+Viav is a minimalist, opinionated, voice channel management bot. To see what it's all about just add it to your server and join a voice channel. Viav doesn't store any user or server information locally, so you know you can trust it in your guild.
 
 ## Features
 
